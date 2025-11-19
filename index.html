@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskPilot</title>
+
+    <!-- ⭐ Favicon (Tab Icon) -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/907/907717.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+
+        <!-- ⭐ Modern Header -->
+        <div class="app-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/907/907717.png" class="app-logo">
+
+            <div>
+                <h1 class="title">TaskPilot</h1>
+                <p class="tagline">Smart • Organized • Productive</p>
+            </div>
+
+            <!-- Dark Mode Toggle -->
+            <div class="toggle-container">
+                <input type="checkbox" id="themeToggle">
+                <label for="themeToggle" class="toggle"></label>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" class="search" placeholder="Search tasks...">
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+
+            <select id="category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+                <option value="Health">Health</option>
+            </select>
+
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button id="addTaskBtn">Add</button>
+        </div>
+
+        <!-- Counters -->
+        <div class="stats">
+            <p>Total: <span id="totalCount">0</span></p>
+            <p>Completed: <span id="completedCount">0</span></p>
+            <p>Pending: <span id="pendingCount">0</span></p>
+        </div>
+
+        <!-- Task list -->
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+/* ===================== */
+/*      FONTS & BODY     */
+/* ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    transition: 0.4s ease-in-out;
+}
+
+/* Glass Card */
+.card {
+    width: 550px;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 35px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ===================== */
+/*       SEARCH BAR      */
+/* ===================== */
+.search {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ===================== */
+/*     INPUT SECTION     */
+/* ===================== */
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 14px;
+    border: none;
+    flex: 1;
+    font-size: 14px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff7a00, #ff3d00);
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #ff5900, #ff2d00);
+}
+
+/* ===================== */
+/*        STATS          */
+/* ===================== */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(255,255,255,0.20);
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-size: 15px;
+}
+
+/* ===================== */
+/*      TASK LIST        */
+/* ===================== */
+#taskList {
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* Task Card */
+li {
+    list-style: none;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 18px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: 0.25s ease;
+}
+
+li:hover {
+    transform: translateY(-4px);
+}
+
+/* Left content */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Checkbox */
+.checkbox {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkbox.completed {
+    background: #4caf50;
+    border-color: #4caf50;
+    animation: pop 0.25s ease;
+}
+
+/* Category Badge */
+.category {
+    background: #ffb36b;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Priority Indicator */
+.low { border-left: 10px solid #4CAF50; }
+.medium { border-left: 10px solid #FFC107; }
+.high { border-left: 10px solid #F44336; }
+
+/* Delete Button */
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #ff3030;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+/* ===================== */
+/*       DARK MODE       */
+/* ===================== */
+body.dark {
+    background: linear-gradient(135deg, #1e1e1e, #0f0f0f);
+}
+
+body.dark .card {
+    background: rgba(30, 30, 30, 0.45);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+body.dark li {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+body.dark .category {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+body.dark .delete-btn {
+    color: #ff4d4d;
+}
+
+/* ===================== */
+/*     DARK MODE TOGGLE  */
+/* ===================== */
+.toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+}
+
+.toggle {
+    width: 55px;
+    height: 28px;
+    background: #cfcaca;
+    display: block;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.toggle:after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: white;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#themeToggle {
+    display: none;
+}
+
+#themeToggle:checked + .toggle {
+    background: #ff7300;
+}
+
+#themeToggle:checked + .toggle:after {
+    transform: translateX(26px);
+}
+/* ===================================== */
+/*         RESPONSIVE DESIGN (MOBILE)     */
+/* ===================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+        align-items: flex-start;
+        background: linear-gradient(135deg, #ff8b4c, #ff4e2a);
+    }
+
+    .card {
+        width: 100%;
+        padding: 22px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .tagline {
+        font-size: 11px;
+        margin-bottom: 14px;
+    }
+
+    .search {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .input-area {
+        flex-direction: column;  /* stacked input fields */
+        gap: 10px;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;            /* full width add button */
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .stats {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .left {
+        gap: 10px;
+    }
+
+    .delete-btn {
+        align-self: flex-end;
+        margin-top: -5px;
+    }
+
+    .toggle-container {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+}
