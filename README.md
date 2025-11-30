@@ -45,3 +45,6 @@ Looks great on:
 
   <img width="1892" height="974" alt="image" src="https://github.com/user-attachments/assets/50b6038c-70b8-4f33-b634-58d6e3279096" />
 
+  <img width="1919" height="976" alt="image" src="https://github.com/user-attachments/assets/646bf434-489d-4cd4-84ec-708a335de056" />
+
+
